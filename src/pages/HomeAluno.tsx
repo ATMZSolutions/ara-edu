@@ -39,8 +39,51 @@ const HomeAluno = () => {
         { code: 'CD7', color: 'Branco' },
         { code: 'CD8', color: 'Rosa' }
       ]
+    },
+    '2022': {
+      D1: [
+        { code: 'CD1', color: 'Azul' },
+        { code: 'CD2', color: 'Amarelo' },
+        { code: 'CD3', color: 'Branco' },
+        { code: 'CD4', color: 'Rosa' }
+      ],
+      D2: [
+        { code: 'CD5', color: 'Amarelo' },
+        { code: 'CD6', color: 'Cinza' },
+        { code: 'CD7', color: 'Azul' },
+        { code: 'CD8', color: 'Rosa' }
+      ]
+    },
+    '2021': {
+      D1: [
+        { code: 'CD1', color: 'Azul' },
+        { code: 'CD2', color: 'Amarelo' },
+        { code: 'CD3', color: 'Branco' },
+        { code: 'CD4', color: 'Verde' }
+      ],
+      D2: [
+        { code: 'CD5', color: 'Amarelo' },
+        { code: 'CD6', color: 'Cinza' },
+        { code: 'CD7', color: 'Azul' },
+        { code: 'CD8', color: 'Verde' }
+      ]
+    },
+    '2020': {
+      D1: [
+        { code: 'CD1', color: 'Azul' },
+        { code: 'CD2', color: 'Amarelo' },
+        { code: 'CD3', color: 'Branco' },
+        { code: 'CD4', color: 'Rosa' }
+      ],
+      D2: [
+        { code: 'CD5', color: 'Azul' },
+        { code: 'CD6', color: 'Amarelo' },
+        { code: 'CD7', color: 'Branco' },
+        { code: 'CD8', color: 'Rosa' }
+      ]
     }
   };
+  
 
   // Atualiza o caderno quando ano ou dia mudam
   useEffect(() => {

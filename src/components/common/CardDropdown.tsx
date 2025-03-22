@@ -43,7 +43,7 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
           {/* Video link opcional usando ReactPlayer */}
           {assunto.videoLink && (
             <div className="mb-2 w-full">
-              <strong>Vídeo aula Recomendada:</strong>
+              <strong>Vídeoaula Recomendada:</strong>
               <div className="mt-2 flex justify-center bg-black">
                 <ReactPlayer
                   url={assunto.videoLink}

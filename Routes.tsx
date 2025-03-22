@@ -3,6 +3,7 @@ import HomeAluno from './src/pages/HomeAluno.tsx';
 import NotFound from './src/pages/NotFound.tsx';
 import AppHeader from './src/components/layout/AppHeader.tsx';
 import AppFooter from './src/components/layout/AppFooter.tsx';
+import TutorialRedacao from './src/pages/TutorialRedacao.tsx';
 
 function AppRoutes() {
     return (
@@ -12,6 +13,7 @@ function AppRoutes() {
                 <Routes>
                     <Route path="/" element={<HomeAluno />} />
                     <Route path="*" element={<NotFound />} />
+                    <Route path="/tutorial-redacao" element={<TutorialRedacao />} />
                 </Routes>
             </div>
             <AppFooter />

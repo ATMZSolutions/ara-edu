@@ -28,6 +28,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
         aluno: [
             { label: "Home", link: "/" },
             { label: "Simulados", link: "/simulados" },
+            { label: "Guia De Redação", link: "/tutorial-redacao" },
         ],
     };
 

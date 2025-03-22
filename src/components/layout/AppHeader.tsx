@@ -10,8 +10,8 @@ interface AppHeaderProps {
 const AppHeader = ({ userType }: AppHeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu hamburguer
     const headers = {
-        admin: "admin.edu",
-        aluno: "aluno.edu",
+        admin: "ara.admin.edu",
+        aluno: "ara.edu",
     };
 
     const handleMenuToggle = () => {
@@ -20,7 +20,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
 
     const menuOptions = {
         admin: [
-            { label: "Home", link: "/home" },
+            { label: "Home", link: "/" },
             { label: "Simulados", link: "/simulados" },
             { label: "Adicionar Questões", link: "/adicionar-questoes" },
             { label: "Gerenciar Alunos", link: "/gerenciar-alunos" },
@@ -36,7 +36,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
             <div className="bg-black fixed top-0 left-0 w-full flex gap-2 items-center justify-between text-white p-4 z-10">
                 <div className="flex items-center gap-2">
                     <img src={Logo} className="w-8" alt="Logo" />
-                    <h1 className="text-2xl">{headers[userType]}</h1>
+                    <h1 className="text-2xl font-semibold">{headers[userType]}</h1>
                 </div>
                 {/* Ícone do menu hamburguer ou de fechar */}
                 <button

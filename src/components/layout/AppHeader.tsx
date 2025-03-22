@@ -11,7 +11,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu hamburguer
     const headers = {
         admin: "ara.admin.edu",
-        aluno: "ara.edu",
+        aluno: "araedu | ENEM",
     };
 
     const handleMenuToggle = () => {
@@ -26,7 +26,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
             { label: "Gerenciar Alunos", link: "/gerenciar-alunos" },
         ],
         aluno: [
-            { label: "Home", link: "/home" },
+            { label: "Home", link: "/" },
             { label: "Simulados", link: "/simulados" },
         ],
     };

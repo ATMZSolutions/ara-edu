@@ -1,5 +1,4 @@
 import CardDropdown from "../components/common/CardDropdown";
-import CompetenciasImage from "../assets/competencias-enem.jpg";
 
 const TutorialRedacao = () => {
   return (
@@ -8,9 +7,9 @@ const TutorialRedacao = () => {
       <CardDropdown
         assunto={{
           titulo: "1- Competências do ENEM?",
-          descricao: "Descrição do assunto 1",
+          descricao: "Veja as 5 competências do ENEM para a redação, de um video remomendado para você.",
           exemplos: ["Exemplo 1", "Exemplo 2"],
-          imagem: CompetenciasImage,
+          videoLink: "https://youtu.be/DE92wAdgJhM?si=VwmX4aPcr2gMPJVx",
         }}
       />
       <CardDropdown

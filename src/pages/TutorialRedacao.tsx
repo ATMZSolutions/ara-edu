@@ -1,22 +1,22 @@
+import ButtonNormal from "../components/common/ButtonNormal";
 import CardDropdown from "../components/common/CardDropdown";
+import PersonReading from "../assets/Enem_logo.png";
 
 const TutorialRedacao = () => {
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center mb-8">
-      <h1 className="text-3xl font-bold mb-8 mt-24">Tutorial de Redação</h1>
+      <img
+        src={PersonReading}
+        alt="Person reading"
+        className="w-3/5 mt-22 mb-4"
+      />
+      <h1 className="text-3xl font-bold mb-8">Tutorial de Redação</h1>
 
       <CardDropdown
         assunto={{
           titulo: "1- Competências do ENEM?",
           descricao:
             "Entenda as 5 competências exigidas pelo ENEM para a redação. Estude como cada uma é avaliada para garantir uma redação bem estruturada e objetiva.",
-          exemplos: [
-            "Competência 1: Estude gramática, ortografia e sintaxe. Pratique revisão de textos e evite erros comuns.",
-            "Competência 2: Pratique interpretar diferentes tipos de temas e faça resumos do que foi solicitado, para não fugir do assunto.",
-            "Competência 3: Estude como agrupar e ordenar suas ideias de maneira lógica e coerente, além de desenvolver argumentos bem estruturados.",
-            "Competência 4: Estude temas sociais, políticos e culturais atuais. Use exemplos de notícias, livros e eventos históricos para fundamentar seus argumentos.",
-            "Competência 5: Estude formas de propor soluções viáveis e claras para o problema abordado, evitando propostas genéricas e imprecisas.",
-          ],
           videoLink: "https://youtu.be/DE92wAdgJhM?si=VwmX4aPcr2gMPJVx",
         }}
       />
@@ -46,6 +46,11 @@ const TutorialRedacao = () => {
             "Saiba como concluir sua redação de forma eficaz, resumindo os pontos principais e propondo soluções ou reflexões finais.",
           videoLink: "https://youtu.be/LcTBcoKjk7U?si=ncXyRMCuPJlYriDe",
         }}
+      />
+      <ButtonNormal
+        label="Analise de Redação"
+        to="/tutorial-redacao/analise"
+        className="mt-4"
       />
     </section>
   );

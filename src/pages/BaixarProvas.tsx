@@ -1,7 +1,7 @@
 // Importando React e Hooks
 import { useState, useEffect } from 'react';
 
-const HomeAluno = () => {
+const Baixarprovas = () => {
   // Estados principais
   const [selectedYear, setSelectedYear] = useState('2024');
   const [selectedDay, setSelectedDay] = useState('D1');
@@ -160,4 +160,4 @@ const HomeAluno = () => {
   );
 };
 
-export default HomeAluno;
+export default Baixarprovas;

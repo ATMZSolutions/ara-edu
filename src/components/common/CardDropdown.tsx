@@ -1,10 +1,11 @@
 import React from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import ReactPlayer from "react-player"; // Importando o ReactPlayer
 
 interface Assunto {
   titulo: string;
   descricao: string;
-  exemplos: string[];
+  exemplos?: string[];
   imagem?: string; // Propriedade opcional para a imagem
   videoLink?: string; // Propriedade opcional para o link de vídeo
 }
@@ -13,16 +14,6 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
-
-  // Função para extrair o ID do vídeo do YouTube
-  const getYouTubeID = (url: string) => {
-    const regex =
-      /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^&\n]{11})/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-  };
-
-  const videoID = assunto.videoLink ? getYouTubeID(assunto.videoLink) : null;
 
   return (
     <div className="mb-4 rounded-md overflow-hidden w-4/5">
@@ -49,27 +40,25 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
               className="w-full h-48 object-cover mb-2"
             />
           )}
-          {/* Video link opcional */}
-          {videoID && (
+          {/* Video link opcional usando ReactPlayer */}
+          {assunto.videoLink && (
             <div className="mb-2 w-full">
               <strong>Vídeo aula Recomendada:</strong>
               <div className="mt-2 flex justify-center bg-black">
-                <iframe
+                <ReactPlayer
+                  url={assunto.videoLink}
                   width=""
                   height=""
-                  src={`https://www.youtube.com/embed/${videoID}`}
-                  title={assunto.titulo}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                  controls
+                />
               </div>
             </div>
           )}
 
-          <p className="mb-1 font-semibold">Estudar:</p>
+          {/* <p className="mb-1 font-semibold">Estudar:</p> */}
           <ul className="list-disc list-inside">
-            {assunto.exemplos.map((exemplo, index) => (
-              <li key={index}>{exemplo}</li>
+            {assunto.exemplos && assunto.exemplos.map((exemplo, index) => (
+              <li className="text-justify" key={index}>{exemplo}</li>
             ))}
           </ul>
         </div>

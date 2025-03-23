@@ -38,9 +38,9 @@ const Baixarprovas = () => {
         { code: "CD4", color: "Rosa" },
       ],
       D2: [
-        { code: "CD5", color: "Azul" },
-        { code: "CD6", color: "Amarelo" },
-        { code: "CD7", color: "Branco" },
+        { code: "CD5", color: "Amarelo" },
+        { code: "CD6", color: "Cinza" },
+        { code: "CD7", color: "Azul" },
         { code: "CD8", color: "Rosa" },
       ],
     },
@@ -69,7 +69,7 @@ const Baixarprovas = () => {
         { code: "CD5", color: "Amarelo" },
         { code: "CD6", color: "Cinza" },
         { code: "CD7", color: "Azul" },
-        { code: "CD8", color: "Verde" },
+        { code: "CD8", color: "Rosa" },
       ],
     },
     "2020": {
@@ -80,8 +80,8 @@ const Baixarprovas = () => {
         { code: "CD4", color: "Rosa" },
       ],
       D2: [
-        { code: "CD5", color: "Azul" },
-        { code: "CD6", color: "Amarelo" },
+        { code: "CD5", color: "Amarelo" },
+        { code: "CD6", color: "Cinza" },
         { code: "CD7", color: "Branco" },
         { code: "CD8", color: "Rosa" },
       ],
@@ -95,10 +95,18 @@ const Baixarprovas = () => {
     setSelectedBooklet(defaultBooklet);
   }, [selectedYear, selectedDay]);
 
-  // Função para abrir o download
+  // Função para abrir o download da prova
   const handleDownload = () => {
     window.open(
       `https://download.inep.gov.br/enem/provas_e_gabaritos/${selectedYear}_PV_impresso_${selectedDay}_${selectedBooklet}.pdf`,
+      "_blank"
+    );
+  };
+
+  // Função para abrir o download do gabarito
+  const handleDownloadGabarito = () => {
+    window.open(
+      `https://download.inep.gov.br/enem/provas_e_gabaritos/${selectedYear}_GB_impresso_${selectedDay}_${selectedBooklet}.pdf`,
       "_blank"
     );
   };
@@ -164,9 +172,17 @@ const Baixarprovas = () => {
 
         <button
           onClick={handleDownload}
-          className="w-full bg-black text-white py-2 rounded-xl hover:bg-gray-700 transition"
+          className="w-full bg-black text-white py-2 rounded-xl hover:bg-gray-700 transition mt-2"
         >
           Baixar Prova
+        </button>
+
+        {/* Botão para baixar o gabarito */}
+        <button
+          onClick={handleDownloadGabarito}
+          className="w-full bg-transparent text-black border-2 py-2 rounded-xl transition mt-1"
+        >
+          Baixar Gabarito
         </button>
       </div>
     </div>

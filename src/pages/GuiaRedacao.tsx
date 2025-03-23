@@ -1,17 +1,15 @@
 import ButtonNormal from "../components/common/ButtonNormal";
 import CardDropdown from "../components/common/CardDropdown";
-import PersonReading from "../assets/Enem_logo.png";
+import EnemLogo from "../assets/enem-logo.png";
 
 const TutorialRedacao = () => {
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center mb-8">
       <img
-        src={PersonReading}
+        src={EnemLogo}
         alt="Person reading"
-        className="w-3/5 mt-22 mb-4"
+        className="w-3/5 md:1/5 mt-22 mb-8"
       />
-      <h1 className="text-3xl font-bold mb-8">Tutorial de Redação</h1>
-
       <CardDropdown
         assunto={{
           titulo: "1- Competências do ENEM?",

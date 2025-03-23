@@ -28,48 +28,55 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
         aluno: [
             { label: "Home", link: "/" },
             { label: "Simulados", link: "/simulados" },
-            { label: "Guia De Redação", link: "/tutorial-redacao" },
+            { label: "Guia De Redação", link: "/guia-redacao" },
             { label: "Baixar Provas", link: "/baixar-provas" },
         ],
     };
 
     return (
-        <>
-            <div className="bg-black fixed top-0 left-0 w-full flex gap-2 items-center justify-between text-white p-4 z-10">
+        <header className="bg-black fixed top-0 left-0 w-full flex flex-col gap-2 items-center justify-between text-white p-4 z-10 lg:flex-row lg:gap-4">
+            <div className="flex items-center gap-2 w-full justify-between lg:justify-start">
                 <div className="flex items-center gap-2">
                     <img src={Logo} className="w-8" alt="Logo" />
                     <h1 className="text-2xl font-semibold">{headers[userType]}</h1>
                 </div>
-                {/* Ícone do menu hamburguer ou de fechar */}
+                {/* Ícone do menu hamburguer visível apenas em telas pequenas */}
                 <button
                     className="text-white focus:outline-none lg:hidden"
                     onClick={handleMenuToggle}
                 >
-                    {isMenuOpen ? (
-                        <FaTimes size={24} /> // Ícone de fechar quando o menu estiver aberto
-                    ) : (
-                        <FaBars size={24} /> // Ícone de hambúrguer quando o menu estiver fechado
-                    )}
+                    {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                 </button>
             </div>
 
-            {/* Menu de navegação que aparece abaixo do cabeçalho */}
-            <div
-                className={`${
-                    isMenuOpen ? "absolute" : "hidden"
-                } top-[60px] left-0 w-full bg-[#333] text-white p-4 z-20`} // Cor de fundo cinza escuro
-            >
+            {/* Navegação visível apenas em telas grandes */}
+            <nav className="hidden lg:flex gap-6 w-1/2">
                 {menuOptions[userType].map((option) => (
                     <a
                         key={option.label}
                         href={option.link}
-                        className="block py-2 px-4 text-white hover:text-gray-400"
+                        className="text-white hover:text-gray-400 text-base "
                     >
                         {option.label}
                     </a>
                 ))}
-            </div>
-        </>
+            </nav>
+
+            {/* Menu mobile */}
+            {isMenuOpen && (
+                <div className="absolute top-[60px] left-0 w-full bg-[#333] text-white p-4 z-20 lg:hidden">
+                    {menuOptions[userType].map((option) => (
+                        <a
+                            key={option.label}
+                            href={option.link}
+                            className="block py-2 px-4 text-white hover:text-gray-400"
+                        >
+                            {option.label}
+                        </a>
+                    ))}
+                </div>
+            )}
+        </header>
     );
 };
 

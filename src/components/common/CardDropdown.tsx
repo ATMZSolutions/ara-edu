@@ -16,7 +16,7 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="mb-4 rounded-md overflow-hidden w-4/5">
+    <div className="mb-4 rounded-md overflow-hidden w-4/5 md:4/5">
       {/* Toggle button */}
       <button
         className="w-full flex justify-between items-center p-2 bg-gray-200 hover:bg-gray-300 transition-all"

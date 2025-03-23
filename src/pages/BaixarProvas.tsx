@@ -104,7 +104,7 @@ const Baixarprovas = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center px-4 text-center">
+    <div className="flex flex-col min-h-screen items-center justify-center px-6 text-center">
       <img
         src={EnemLogo}
         alt="Person reading"
@@ -115,7 +115,7 @@ const Baixarprovas = () => {
       </p>
 
       {/* Formulário */}
-      <div className="w-full max-w-xl bg-gray-100 p-6 rounded-2xl space-y-3">
+      <div className="w-full max-w-xl bg-gray-50 rounded px-2 py-6 space-y-3">
         <div className="flex flex-col items-start">
           <label className="block mb-1 font-medium">Ano:</label>
           <select

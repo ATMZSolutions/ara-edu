@@ -4,9 +4,10 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface ImageSliderProps {
     images: string[];
+    style?: string;
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
+const ImageSlider: React.FC<ImageSliderProps> = ({ images, style }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Função para ir à imagem anterior
@@ -28,11 +29,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     }, [currentIndex]);
 
     return (
-        <div className="flex items-center justify-center w-full relative shadow-sm">
+        <div className={`flex items-center justify-center relative shadow-sm ${style}`}>
             <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="w-full h-48 object-cover"
+                className="w-full h-40 object-cover"
             />
 
             {/* Botão para imagem anterior */}

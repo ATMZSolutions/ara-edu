@@ -34,7 +34,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
     };
 
     return (
-        <header className="bg-[#00145D] fixed top-0 left-0 w-full flex flex-col gap-2 items-center justify-between text-white p-4 z-10 lg:flex-row lg:gap-4">
+        <header className="bg-[#00145D] w-full flex flex-col gap-2 items-center justify-between text-white p-2 z-10 lg:flex-row lg:gap-4">
             <div className="flex items-center gap-2 w-full justify-between lg:justify-start">
                 <div className="flex items-center gap-2">
                     <img src={Logo} className="w-8" alt="Logo" />

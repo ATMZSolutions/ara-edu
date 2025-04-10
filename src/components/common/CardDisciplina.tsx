@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { FaArrowAltCircleRight, FaPencilAlt, FaGlobeAmericas, FaBook } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaPencilAlt, FaGlobeAmericas, FaBook, FaBacterium } from "react-icons/fa";
+import { MdOutlineTranslate } from "react-icons/md";
 import { TbMath } from "react-icons/tb";
 
 // Interface que define o tipo do objeto disciplina
@@ -22,6 +23,10 @@ const getIconComponent = (icon?: string) => {
             return <TbMath size={40} className="text-[#00145d]" />;
         case "linguagens":
             return <FaBook size={40} className="text-[#00145d]" />;
+        case "natureza":
+            return <FaBacterium size={40} className="text-[#00145d]" />;
+        case "idiomas":
+            return <MdOutlineTranslate size={40} className="text-[#00145d]" />;
         default:
             return null;
     }
@@ -34,7 +39,7 @@ const CardDisciplina = ({ disciplina }: { disciplina: Disciplina }) => {
     return (
         // Card com tamanho fixo e layout horizontal
         <div
-            className={`w-[350px] h-[150px] m-2 shadow-lg rounded-2xl p-4 hover:scale-105 transition-transform duration-300 cursor-pointer flex flex-row items-center justify-between ${disciplina.style || ""}`}
+            className={`w-[300px] h-[150px] m-2 shadow-lg rounded-2xl pl-4 hover:scale-105 transition-transform duration-300 cursor-pointer flex flex-row items-center justify-between ${disciplina.style || ""}`}
         >
             {/* Ícone à esquerda */}
             {IconComponent && (
@@ -51,7 +56,7 @@ const CardDisciplina = ({ disciplina }: { disciplina: Disciplina }) => {
 
             {/* Botão de navegação à direita */}
             <div
-                className="h-full rounded-full bg-[#00145d] text-white flex justify-center items-center p-2 ml-2"
+                className="h-full rounded-r-2xl bg-[#00145d] text-white flex justify-center items-center p-2 ml-2"
                 onClick={() => navigate(disciplina.link)}
             >
                 <FaArrowAltCircleRight size={20} className="text-[#ffd400]" />

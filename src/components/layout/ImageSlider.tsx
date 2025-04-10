@@ -23,7 +23,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
 
     // Auto-play com setInterval
     useEffect(() => {
-        const interval = setInterval(goToNext, 3000); // Muda a imagem a cada 3 segundos
+        const interval = setInterval(goToNext, 2000); // Muda a imagem a cada 3 segundos
         return () => clearInterval(interval); // Limpa o intervalo ao desmontar
     }, [currentIndex]);
 
@@ -38,7 +38,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             {/* Botão para imagem anterior */}
             <button
                 onClick={goToPrevious}
-                className="absolute left-0 p-2 mx-4 bg-[#ffd400] bg-opacity-50 rounded-full hover:bg-opacity-75 focus:outline-none"
+                className="absolute left-0 p-2 mx-4 bg-[#ffd500] bg-opacity-50 rounded-full hover:bg-opacity-75 focus:outline-none"
             >
                 <FaChevronLeft size={24} className="text-[#00144d]" />
             </button>

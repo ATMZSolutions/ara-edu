@@ -3,6 +3,7 @@ import ImageSlider from "../components/layout/ImageSlider";
 
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
+import slide3 from "../assets/slide3.png";
 
 // Informações de cada área do conhecimento
 const areaInfo = [
@@ -15,33 +16,49 @@ const areaInfo = [
     icon: "redacao",
   },
   {
+    title: "Linguagens",
+    descricao:
+      "Melhore sua interpretação de texto e domine gramática e literatura com foco no ENEM.",
+    link: "/linguagens",
+    style: "bg-purple-200",
+    icon: "linguagens",
+  },
+  {
+    title: "Matemática",
+    descricao:
+      "Aprenda matemática com foco em resolução prática, revisão rápida e exercícios comentados.",
+    link: "/matematica",
+    style: "bg-red-200",
+    icon: "exatas",
+  },
+  {
+    title: "Ciências da Natureza",
+    descricao:
+      "Explore biologia, física e química com abordagens interdisciplinares e atualizadas.",
+    link: "/ciencias-natureza",
+    style: "bg-orange-200",
+    icon: "natureza",
+  },
+  {
     title: "Ciências Humanas",
     descricao:
-      "Aprenda história, geografia, filosofia e sociologia de forma integrada e atualizada para o ENEM.",
+      "Entenda história, geografia, filosofia e sociologia com foco em atualidades e ENEM.",
     link: "/ciencias-humanas",
     style: "bg-blue-200",
     icon: "humanas",
   },
   {
-    title: "Exatas",
+    title: "Língua Estrangeira",
     descricao:
-      "Matemática, física, química e biologia descomplicadas, com foco em resolução prática e revisão rápida.",
-    link: "/exatas",
-    style: "bg-red-200",
-    icon: "exatas",
-  },
-  {
-    title: "Linguagens",
-    descricao:
-      "Melhore sua interpretação de texto, aprenda gramática na prática e domine o conteúdo de inglês ou espanhol.",
-    link: "/linguagens",
-    style: "bg-purple-200",
-    icon: "linguagens",
-  },
+      "Aprenda inglês ou espanhol de forma contextualizada para interpretação de texto no ENEM.",
+    link: "/lingua-estrangeira",
+    style: "bg-pink-200",
+    icon: "idiomas",
+  }
 ];
 
 const LandingPage = () => {
-  const images = [slide1, slide2]; // Imagens para o slider
+  const images = [slide1, slide2, slide3]; // Imagens para o slider
 
   return (
     <section className="flex flex-col my-16 min-h-screen max-w-screen items-center">
@@ -55,13 +72,13 @@ const LandingPage = () => {
 
       {/* Texto de chamada + botão principal */}
       <div className="flex flex-col items-center w-3/5 md:w-2/5">
-        <p className="text-center text-md font-medium mt-2">
-          Comece sua jornada com nossas trilhas de conhecimento:
+        <p className="text-center text-sm mt-2">
+          Comece sua jornada com nossas <br /> trilhas de conhecimento:
         </p>
       </div>
 
       {/* Cards de disciplina por área */}
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-6">
         {areaInfo.map((area, index) => (
           <CardDisciplina
             key={index}

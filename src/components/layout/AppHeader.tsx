@@ -11,7 +11,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu hamburguer
     const headers = {
         admin: "AraEDU-Admin | ENEM",
-        aluno: "AraEDU | ENEM",
+        aluno: "Ara Edu | ENEM",
     };
 
     const handleMenuToggle = () => {
@@ -34,7 +34,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
     };
 
     return (
-        <header className="bg-black fixed top-0 left-0 w-full flex flex-col gap-2 items-center justify-between text-white p-4 z-10 lg:flex-row lg:gap-4">
+        <header className="bg-[#00145D] fixed top-0 left-0 w-full flex flex-col gap-2 items-center justify-between text-white p-4 z-10 lg:flex-row lg:gap-4">
             <div className="flex items-center gap-2 w-full justify-between lg:justify-start">
                 <div className="flex items-center gap-2">
                     <img src={Logo} className="w-8" alt="Logo" />
@@ -42,7 +42,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
                 </div>
                 {/* Ícone do menu hamburguer visível apenas em telas pequenas */}
                 <button
-                    className="text-white focus:outline-none lg:hidden"
+                    className="text-[#ffd400] focus:outline-none lg:hidden"
                     onClick={handleMenuToggle}
                 >
                     {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -55,7 +55,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
                     <a
                         key={option.label}
                         href={option.link}
-                        className="text-white hover:text-gray-400 text-base "
+                        className="text-[#ffd400] hover:text-gray-400 text-base "
                     >
                         {option.label}
                     </a>
@@ -69,7 +69,7 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
                         <a
                             key={option.label}
                             href={option.link}
-                            className="block py-2 px-4 text-white hover:text-gray-400"
+                            className="block py-2 px-4 text-[#ffd400] hover:text-gray-400"
                         >
                             {option.label}
                         </a>

@@ -1,14 +1,18 @@
 import Logo from "./../../assets/atmz-s-logo.svg";
+import Logo2 from "./../../assets/ara-logo.png";
 
 const AppFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="w-full h-auto flex flex-row md:flex-row gap-4 justify-center items-center p-6">
-        <p className="text-gray-500">Desenvolvido por: <br/> WebDevMatias :D</p>
-        <img src={Logo} className="w-32" alt="Logo" />
+    <footer className="bg-[#00145D] text-white">
+      <div className="w-full h-auto flex flex-col gap-4 justify-center items-center p-6">
+        <p className="text-gray-500">Realização :</p>
+        <div className="flex flex-row gap-4">
+          <img src={Logo} className="w-40" alt="Logo" />
+          <img src={Logo2} className="w-48 bg-white px-2 py-1 rounded" alt="Logo Ara" />
+        </div>
       </div>
       <div className="border-t border-gray-700">
-        <p className="text-center text-gray-500 text-sm py-4">
+        <p className="text-center text-[#ffda00] text-sm py-4">
           &copy; 2025 AraEDU. Todos os direitos reservados.
         </p>
       </div>

@@ -28,7 +28,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     }, [currentIndex]);
 
     return (
-        <div className="flex items-center justify-center w-full relative">
+        <div className="flex items-center justify-center w-full relative shadow-sm">
             <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}

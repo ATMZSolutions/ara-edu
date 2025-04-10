@@ -44,7 +44,7 @@ const LandingPage = () => {
   const images = [slide1, slide2]; // Imagens para o slider
 
   return (
-    <section className="flex flex-col my-16 min-h-screen w-full items-center">
+    <section className="flex flex-col my-16 min-h-screen max-w-screen items-center">
       {/* Slider de imagens da landing */}
       <ImageSlider images={images} />
 

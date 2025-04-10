@@ -64,14 +64,14 @@ const AppHeader = ({ userType }: AppHeaderProps) => {
 
             {/* Menu mobile */}
             {isMenuOpen && (
-                <div className="absolute top-[60px] left-0 w-full bg-[#333] text-white p-4 z-20 lg:hidden">
+                <div className="absolute top-[45px] left-0 w-full bg-[#ffd400] text-white p-4 z-20 lg:hidden">
                     {menuOptions[userType].map((option) => (
                         <a
                             key={option.label}
                             href={option.link}
-                            className="block py-2 px-4 text-[#ffd400] hover:text-gray-400"
+                            className="block px-4 text-[#00145d] hover:text-gray-400"
                         >
-                            {option.label}
+                            - {option.label}
                         </a>
                     ))}
                 </div>

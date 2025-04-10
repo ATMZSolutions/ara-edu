@@ -48,22 +48,13 @@ const LandingPage = () => {
       {/* Slider de imagens da landing */}
       <ImageSlider images={images} />
 
-      {/* barra divisoria */}
-      <div className="h-1 bg-[#00145d3d] mt-4 w-4/5 md:w-4/5"></div>
-
       {/* Título principal */}
-      <p className="text-3xl text-[#00155d] font-bold text-center mt-4">
-        Bem-vindo!
+      <p className="text-3xl text-[#00155d] font-bold text-center mt-8">
+        Olá, estudante!
       </p>
-      <p className="text-lg text-gray-600 text-center mt-2">
-        Sua plataforma de aprendizado <br /> para o ENEM!
-      </p>
-
-      {/* barra divisoria */}
-      <div className="h-1 bg-[#00145d3d] mt-4 w-4/5 md:4/5"></div>
 
       {/* Texto de chamada + botão principal */}
-      <div className="flex flex-col items-center w-3/5 md:w-2/5 mt-4">
+      <div className="flex flex-col items-center w-3/5 md:w-2/5">
         <p className="text-center text-md font-medium mt-2">
           Comece sua jornada com nossas trilhas de conhecimento:
         </p>

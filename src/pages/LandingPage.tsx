@@ -1,4 +1,3 @@
-import ButtonNormal from "../components/common/ButtonNormal";
 import CardDisciplina from "../components/common/CardDisciplina";
 import ImageSlider from "../components/layout/ImageSlider";
 

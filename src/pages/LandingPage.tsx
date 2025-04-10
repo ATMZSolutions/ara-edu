@@ -61,9 +61,9 @@ const LandingPage = () => {
   const images = [slide1, slide2, slide1, slide3]; // Imagens para o slider
 
   return (
-    <section className="flex flex-col my-16 min-h-screen max-w-screen items-center">
+    <section className="flex flex-col my-b min-h-screen max-w-screen items-center">
       {/* Slider de imagens da landing */}
-      <ImageSlider images={images} />
+      <ImageSlider style="w-full" images={images} />
 
       {/* Título principal */}
       <p className="text-3xl text-[#00155d] font-bold text-center mt-8">
@@ -78,7 +78,7 @@ const LandingPage = () => {
       </div>
 
       {/* Cards de disciplina por área */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6">
         {areaInfo.map((area, index) => (
           <CardDisciplina
             key={index}

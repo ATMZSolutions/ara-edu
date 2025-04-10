@@ -3,7 +3,7 @@ import Logo2 from "./../../assets/ara-logo.png";
 
 const AppFooter = () => {
   return (
-    <footer className="bg-[#00145D] text-white">
+    <footer className="bg-[#00145D] text-white mb-14">
       <div className="w-full h-auto flex flex-col gap-4 justify-center items-center p-6">
         <div className="flex flex-row gap-4">
           <img src={Logo} className="w-30" alt="Logo" />

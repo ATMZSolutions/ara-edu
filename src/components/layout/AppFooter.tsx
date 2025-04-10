@@ -7,8 +7,8 @@ const AppFooter = () => {
       <div className="w-full h-auto flex flex-col gap-4 justify-center items-center p-6">
         <p className="text-gray-500">Realização :</p>
         <div className="flex flex-row gap-4">
-          <img src={Logo} className="w-40" alt="Logo" />
-          <img src={Logo2} className="w-48 bg-white px-2 py-1 rounded" alt="Logo Ara" />
+          <img src={Logo} className="w-30" alt="Logo" />
+          <img src={Logo2} className="w-34 bg-white px-2 py-1 rounded" alt="Logo Ara" />
         </div>
       </div>
       <div className="border-t border-gray-700">

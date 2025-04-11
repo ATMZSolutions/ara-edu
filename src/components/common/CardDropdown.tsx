@@ -1,13 +1,14 @@
 import React from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import ReactPlayer from "react-player"; // Importando o ReactPlayer
+import ReactPlayer from "react-player";
 
+// Tipagem para os dados dos cards
 interface Assunto {
   titulo: string;
   descricao: string;
   exemplos?: string[];
-  imagem?: string; // Propriedade opcional para a imagem
-  videoLink?: string; // Propriedade opcional para o link de vídeo
+  imagem?: string;
+  videoLink?: string;
 }
 
 const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
@@ -16,51 +17,60 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="mb-4 rounded-md overflow-hidden w-4/5 md:4/5">
-      {/* Toggle button */}
+    <div className="w-full md:w-4/5 lg:w-3/4 mb-5 rounded-xl shadow-sm">
+      {/* Botão de abertura do card */}
       <button
-        className="w-full flex justify-between items-center p-2 bg-gray-200 hover:bg-gray-300 transition-all"
         onClick={toggleDropdown}
+        className="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 border border-gray-300 rounded-md transition-colors"
       >
-        <span className="font-medium">{assunto.titulo}</span>
-        {isOpen ? <FiChevronUp size={24} /> : <FiChevronDown size={24} />}
+        <span className="text-left font-semibold text-gray-800">{assunto.titulo}</span>
+        {isOpen ? <FiChevronUp size={22} /> : <FiChevronDown size={22} />}
       </button>
 
-      {/* Dropdown content */}
+      {/* Conteúdo do card */}
       {isOpen && (
-        <div className="p-4 bg-gray-50 text-gray-700">
-          <p className="mb-2 text-justify">
-            <strong>Descrição:</strong> {assunto.descricao}
+        <div className="bg-white p-5 border border-t-0 border-gray-300 rounded-b-md">
+          {/* Descrição */}
+          <p className="mb-3 text-gray-700 text-justify">
+            {assunto.descricao}
           </p>
-          {/* Imagem opcional */}
+
+          {/* Imagem (se houver) */}
           {assunto.imagem && (
             <img
               src={assunto.imagem}
-              alt={assunto.titulo}
-              className="w-full h-48 object-cover mb-2"
+              alt={`Imagem ilustrativa para ${assunto.titulo}`}
+              className="w-full h-52 object-cover rounded-md mb-4"
             />
           )}
-          {/* Video link opcional usando ReactPlayer */}
+
+          {/* Vídeo (se houver) */}
           {assunto.videoLink && (
-            <div className="mb-2 w-full">
-              <strong>Vídeoaula Recomendada:</strong>
-              <div className="mt-2 flex justify-center bg-black">
+            <div className="mb-4">
+              <p className="font-semibold text-gray-800 mb-2">Vídeoaula Recomendada:</p>
+              <div className="aspect-video max-w-full mx-auto">
                 <ReactPlayer
                   url={assunto.videoLink}
-                  width=""
-                  height=""
+                  width="100%"
+                  height="100%"
+                  backgroundColor="#000"
                   controls
                 />
               </div>
             </div>
           )}
 
-          {/* <p className="mb-1 font-semibold">Estudar:</p> */}
-          <ul className="list-disc list-inside">
-            {assunto.exemplos && assunto.exemplos.map((exemplo, index) => (
-              <li className="text-justify" key={index}>{exemplo}</li>
-            ))}
-          </ul>
+          {/* Lista de exemplos (se houver) */}
+          {assunto.exemplos && (
+            <>
+              <p className="font-semibold text-gray-800 mb-2">Exemplos:</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                {assunto.exemplos.map((exemplo, index) => (
+                  <li key={index} className="text-justify">{exemplo}</li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
       )}
     </div>

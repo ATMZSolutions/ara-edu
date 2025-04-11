@@ -116,7 +116,7 @@ const Baixarprovas = () => {
       <img
         src={EnemLogo}
         alt="Person reading"
-        className="w-3/5 md:1/5 mt-22 mb-2"
+        className="w-3/5 md:1/5 mb-2"
       />
       <p className="text-gray-600 mb-10">
         Baixar Provas do ENEM de forma prática!
@@ -172,7 +172,7 @@ const Baixarprovas = () => {
 
         <button
           onClick={handleDownload}
-          className="w-full bg-black text-white py-2 rounded-xl hover:bg-gray-700 transition mt-2"
+          className="w-full bg-[#00145d] text-white py-2 rounded-xl hover:bg-gray-700 transition mt-2"
         >
           Baixar Prova
         </button>
@@ -180,7 +180,7 @@ const Baixarprovas = () => {
         {/* Botão para baixar o gabarito */}
         <button
           onClick={handleDownloadGabarito}
-          className="w-full bg-transparent text-black border-2 py-2 rounded-xl transition mt-1"
+          className="w-full bg-transparent text-[#00145d] border-2 py-2 rounded-xl transition mt-1"
         >
           Baixar Gabarito
         </button>

@@ -11,7 +11,7 @@ const areaInfo = [
     title: "Redação",
     descricao:
       "Domine competências, estrutura, argumentação e conclusão com exemplos práticos.",
-    link: "/tutorial-redacao",
+    link: "/redacao",
     style: "bg-yellow-200",
     icon: "redacao",
   },

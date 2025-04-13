@@ -21,9 +21,9 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
       {/* Botão de abertura do card */}
       <button
         onClick={toggleDropdown}
-        className="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 border border-gray-300 rounded-md transition-colors"
+        className="w-full flex justify-between items-center p-2 bg-white hover:bg-gray-50 border border-gray-300 rounded-md transition-colors"
       >
-        <span className="text-left font-semibold text-gray-800">{assunto.titulo}</span>
+        <span className="text-left mr-2 font-semibold text-gray-800">{assunto.titulo}</span>
         {isOpen ? <FiChevronUp size={22} /> : <FiChevronDown size={22} />}
       </button>
 
@@ -31,7 +31,7 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
       {isOpen && (
         <div className="bg-white p-5 border border-t-0 border-gray-300 rounded-b-md">
           {/* Descrição */}
-          <p className="mb-3 text-gray-700 text-justify">
+          <p className="mb-3 text-gray-700 text-justify break-all">
             {assunto.descricao}
           </p>
 
@@ -63,10 +63,10 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
           {/* Lista de exemplos (se houver) */}
           {assunto.exemplos && (
             <>
-              <p className="font-semibold text-gray-800 mb-2">Exemplos:</p>
+              {/* <p className="font-semibold text-gray-800 mb-2">Estudar:</p> */}
               <ul className="list-disc list-inside space-y-1 text-gray-700">
                 {assunto.exemplos.map((exemplo, index) => (
-                  <li key={index} className="text-justify">{exemplo}</li>
+                  <li key={index} className="text-start">{exemplo}</li>
                 ))}
               </ul>
             </>

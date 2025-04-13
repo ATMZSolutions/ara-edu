@@ -17,7 +17,7 @@ const ButtonNormal: React.FC<ButtonNormalProps> = ({ label, to, className }) => 
 
     return (
         <button
-            className={`flex justify-center items-center gap-4 py-1 ${className}`}
+            className={`flex justify-center items-center gap-4 py-2 ${className}`}
             onClick={handleClick}
         >
             {label}

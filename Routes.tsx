@@ -7,6 +7,7 @@ import GuiaRedacao from './src/pages/GuiaRedacao.tsx';
 import LandingPage from './src/pages/LandingPage.tsx';
 import BottomNav from './src/components/layout/BottomNav.tsx';
 import Redacao from './src/pages/Redacao.tsx';
+import Matematica from './src/pages/trilhas/Matematica.tsx';
 
 function AppRoutes() {
     return (
@@ -19,6 +20,7 @@ function AppRoutes() {
                     <Route path="*" element={<NotFound />} />
                     <Route path="/redacao" element={<Redacao />} />
                     <Route path="/guia-redacao" element={<GuiaRedacao />} />
+                    <Route path="/matematica" element={<Matematica />} />
                 </Routes>
             </div>
             <BottomNav/>

@@ -1,6 +1,6 @@
 import ButtonNormal from "../components/common/ButtonNormal";
 import CardDropdown from "../components/common/CardDropdown";
-import logo from "../assets/enem-logo.png";
+import TitleIcon from "../components/common/TitleIcon";
 
 // Interface tipada para os temas de redação
 interface Assunto {
@@ -68,27 +68,26 @@ const RedacaoENEM = () => {
 
   return (
     <div className="min-h-screen bg-white px-4">
-      <div className="max-w-4xl mx-auto mt-12">
-        {/* Cabeçalho da Página */}
-        {/* <header className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-[#00145d] mb-2">Redação ENEM</h1>
-        </header> */}
-        <img
-          src={logo}
-          alt="Logo do ENEM"
-          className="w-3/5 md:1/5 mt-22 mb-8 mx-auto"
+      <div className="max-w-4xl mx-auto mt-12 flex flex-col items-center">
+        {/* Título da página */}
+        <TitleIcon
+          title="Redação"
+          subtitle="Conteudo Programático."
+          style="text-4xl"
         />
 
         {/* Seção de Introdução */}
         <section className="mb-8">
-          <p className="text-gray-700 text-justify mb-4">
-            A redação do ENEM é uma das partes mais importantes do exame, valendo até 1000 pontos. 
-            Nesta página, você encontrará os principais elementos para construir uma redação nota máxima, 
-            apresentados em forma de perguntas e respostas interativas.
+          <p className="text-gray-700 text-justify mb-6 indent-10">
+            A redação do ENEM é uma das partes mais importantes do exame,
+            valendo até 1000 pontos. Nesta página, você encontrará os principais
+            elementos para construir uma redação nota máxima, apresentados em
+            forma de perguntas e respostas interativas.
           </p>
           <div className="bg-[#00145d] border-l-4 border-yellow-400 p-4">
             <p className="text-[#ffd400] font-medium">
-              Dica: filmes, livros e séries podem ser ótimas fontes de inspiração.
+              Dica: filmes, livros e séries podem ser ótimas fontes de
+              inspiração.
             </p>
           </div>
         </section>
@@ -102,7 +101,11 @@ const RedacaoENEM = () => {
           ))}
         </section>
 
-        <ButtonNormal label="Leia Redações Nota 1000" to="/redacoes-nota-maxima" className="mt-8 w-full text-[#ffd400] bg-[#00145d] rounded" />
+        <ButtonNormal
+          label="Leia Redações Nota 1000"
+          to="/redacoes-nota-maxima"
+          className="mt-8 w-full text-white bg-[#00145d] rounded"
+        />
       </div>
     </div>
   );

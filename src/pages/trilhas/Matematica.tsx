@@ -100,7 +100,7 @@ const Matematica = () => {
 
         <TitleIcon
           title="Matemática"
-          subtitle="Conteudo Programático."
+          subtitle="Conteúdo Programático."
           style="text-5xl"
         />
 

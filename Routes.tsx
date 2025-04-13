@@ -6,7 +6,7 @@ import AppFooter from './src/components/layout/AppFooter.tsx';
 import GuiaRedacao from './src/pages/GuiaRedacao.tsx';
 import LandingPage from './src/pages/LandingPage.tsx';
 import BottomNav from './src/components/layout/BottomNav.tsx';
-import Redacao from './src/pages/Redacao.tsx';
+import Redacao from './src/pages/trilhas/Redacao.tsx';
 import Matematica from './src/pages/trilhas/Matematica.tsx';
 
 function AppRoutes() {

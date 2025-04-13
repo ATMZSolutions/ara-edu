@@ -52,7 +52,7 @@ const TitleIcon: React.FC<TitleIconProps> = ({ title, subtitle, style }) => {
       <div className={`text-4xl text-[#00145d] mb-4 ${style}`}>{icon}</div>
       <div className="flex flex-col justify-start">
         <h1 className="text-3xl font-bold text-gray-800 mt-4">{title}</h1>
-        <p className="text-gray-700 mb-8">{subtitle}</p>
+        <p className="text-white px-1 bg-[#00145d] mb-8">{subtitle}</p>
       </div>
     </div>
   );

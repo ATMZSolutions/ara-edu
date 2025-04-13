@@ -33,7 +33,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, style }) => {
             <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="w-full h-40 object-cover"
+                className="w-full h-60 md:h-60 object-cover"
             />
 
             {/* Botão para imagem anterior */}

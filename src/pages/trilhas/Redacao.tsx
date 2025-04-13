@@ -1,6 +1,6 @@
-import ButtonNormal from "../components/common/ButtonNormal";
-import CardDropdown from "../components/common/CardDropdown";
-import TitleIcon from "../components/common/TitleIcon";
+import ButtonNormal from "../../components/common/ButtonNormal";
+import CardDropdown from "../../components/common/CardDropdown";
+import TitleIcon from "../../components/common/TitleIcon";
 
 // Interface tipada para os temas de redação
 interface Assunto {
@@ -72,7 +72,7 @@ const RedacaoENEM = () => {
         {/* Título da página */}
         <TitleIcon
           title="Redação"
-          subtitle="Conteudo Programático."
+          subtitle="Conteúdo Programático."
           style="text-4xl"
         />
 

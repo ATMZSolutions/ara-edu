@@ -70,7 +70,7 @@ const CardDisciplina = ({ disciplina }: { disciplina: Disciplina }) => {
   return (
     // Card com tamanho fixo e layout horizontal
     <div
-      className={`w-11/12 h-[150px] md:w-[300px] shadow-md rounded-2xl pl-4 mx-auto cursor-pointer flex flex-row items-center justify-between ${disciplina.style || ""}`}
+      className={`w-11/12 h-[150px] md:w-[300px] shadow-sm rounded-2xl pl-4 mx-auto cursor-pointer flex flex-row items-center justify-between ${disciplina.style || ""}`}
     >
       {/* Ícone à esquerda */}
       {IconComponent && (

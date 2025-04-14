@@ -68,13 +68,13 @@ const RedacaoENEM = () => {
 
   return (
     <div className="min-h-screen bg-white px-4">
-      <div className="max-w-4xl mx-auto mt-12 flex flex-col items-center">
+      <div className="max-w-4xl mx-auto mt-18 flex flex-col items-center">
         {/* Título da página */}
         <TitleIcon
           title="Redação"
           subtitle="Conteúdo Programático."
           style="text-4xl"
-        />
+        />  
 
         {/* Seção de Introdução */}
         <section className="mb-8">
@@ -93,7 +93,7 @@ const RedacaoENEM = () => {
         </section>
 
         {/* Alternância entre texto e dropdowns */}
-        <section className="space-y-6">
+        <section className="space-y-6 w-full">
           {temasRedacao.map((assunto, index) => (
             <div key={index}>
               <CardDropdown assunto={assunto} />

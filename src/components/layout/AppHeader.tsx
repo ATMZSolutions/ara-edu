@@ -16,7 +16,7 @@ const AppHeader = () => {
   ];
 
   return (
-    <header className="bg-[#00145D] w-full flex flex-col items-center justify-around text-white z-10 lg:flex-row lg:justify-between lg:items-center">
+    <header className="bg-[#00145D] w-full flex z-20 fixed top-0 left-0 flex-col items-center justify-around text-white lg:flex-row lg:justify-between lg:items-center">
       {/* Logo + Título + Botão do menu (mobile) */}
       <div className="flex items-center justify-between w-full lg:w-auto">
         <div className="flex items-center gap-2">
@@ -52,7 +52,7 @@ const AppHeader = () => {
 
       {/* Menu mobile */}
       {isMenuOpen && (
-        <div className="absolute top-[47px] left-0 w-full bg-[#ffd400] text-white p-4 z-20 lg:hidden">
+        <div className="absolute top-[47px] left-0 w-full bg-[#ffd400] text-white p-4 pb-16 z-20 lg:hidden">
           {menuOptions.map((option) => (
             <a
               key={option.label}

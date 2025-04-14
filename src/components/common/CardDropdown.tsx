@@ -17,7 +17,7 @@ const CardDropdown = ({ assunto }: { assunto: Assunto }) => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="w-full md:w-4/5 lg:w-3/4 mb-5 rounded-xl shadow-sm">
+    <div className="mb-5 rounded-xl shadow-sm">
       {/* Botão de abertura do card */}
       <button
         onClick={toggleDropdown}

@@ -29,11 +29,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, style }) => {
     }, [currentIndex]);
 
     return (
-        <div className={`flex items-center justify-center relative shadow-md ${style}`}>
+        <div className={`flex items-center justify-center relative shadow-md rounded-xl ${style}`}>
             <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="w-full h-60 md:h-40 object-cover"
+                className="w-full h-60 md:h-40 object-cover rounded-xl"
             />
 
             {/* Botão para imagem anterior */}

@@ -3,9 +3,8 @@ import ImageSlider from "../components/layout/ImageSlider";
 
 import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.png";
-import slide3 from "../assets/slide3.png";
+import slide3 from "../assets/slide3.svg";
 
-// Informações de cada área do conhecimento
 // Informações de cada área do conhecimento
 const areaInfo = [
   {
@@ -33,7 +32,7 @@ const areaInfo = [
     title: "Literatura",
     descricao: "Estilos literários, movimentos e análise de obras exigidas no ENEM.",
     link: "/literatura",
-    style: "bg-cyan-100",
+    style: "bg-violet-50",
     icon: "literatura",
   },
   {
@@ -101,16 +100,16 @@ const LandingPage = () => {
   return (
     <section className="flex flex-col my-b min-h-screen max-w-screen items-center justify-center">
       {/* Slider de imagens da landing */}
-      <ImageSlider style="w-full" images={images} />
+      <ImageSlider style="w-11/12 md:w-4/5 mt-16" images={images} />
 
       {/* Título principal */}
-      <p className="text-3xl text-[#00155d] font-bold text-center mt-8">
+      <p className="text-3xl text-[#00155d] font-bold text-center mt-6 md:mt-4">
         Olá, estudante!
       </p>
 
       {/* Texto de chamada + botão principal */}
       <div className="flex flex-col items-center w-3/5 md:w-2/5">
-        <p className="text-center text-sm mt-2">
+        <p className="text-center text-sm mt-2 md:mt-0">
           Comece sua jornada com nossas <br /> trilhas de conhecimento:
         </p>
       </div>

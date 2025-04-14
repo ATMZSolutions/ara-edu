@@ -4,7 +4,7 @@ import logo3 from "./../../assets/logo-araedu-w.png";
 
 const AppFooter = () => {
   return (
-    <footer className="bg-[#00145D] text-white mb-14">
+    <footer className="bg-[#00145D] text-white mb-14 md:mb-0">
       <div className="w-full h-auto flex flex-col gap-4 justify-center items-center p-6">
         <div className="flex md:flex-row flex-col gap-4 justify-center items-center">
         <img src={logo3} className="w-36" alt="Logo AraEdu" />

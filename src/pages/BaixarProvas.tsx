@@ -116,14 +116,14 @@ const Baixarprovas = () => {
       <img
         src={EnemLogo}
         alt="Person reading"
-        className="w-3/5 md:1/5 mb-2"
+        className="w-3/5 md:w-1/5 mb-2 mt-16"
       />
-      <p className="text-gray-600 mb-10">
-        Baixar Provas do ENEM de forma prática!
+      <p className="text-gray-600 mb-6">
+        Baixar Provas do ENEM:
       </p>
 
       {/* Formulário */}
-      <div className="w-full max-w-xl bg-gray-50 rounded px-2 py-6 space-y-3">
+      <div className="w-4/5 md:w-4/12 bg-gray-50 rounded-lg px-2 py-2 space-y-3">
         <div className="flex flex-col items-start">
           <label className="block mb-1 font-medium">Ano:</label>
           <select
@@ -172,7 +172,7 @@ const Baixarprovas = () => {
 
         <button
           onClick={handleDownload}
-          className="w-full bg-[#00145d] text-white py-2 rounded-xl hover:bg-gray-700 transition mt-2"
+          className="w-full bg-[#00145d] text-white py-2 rounded-xl hover:bg-[#ffd400] transition mt-2"
         >
           Baixar Prova
         </button>

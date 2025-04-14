@@ -1,4 +1,4 @@
-// src/pages/ChecklistConteudos.jsx
+// src/pages/Matematica.jsx
 import CardDropdown from "../../components/common/CardDropdown";
 import ButtonNormal from "../../components/common/ButtonNormal";
 import TitleIcon from "../../components/common/TitleIcon";
@@ -6,6 +6,7 @@ import TitleIcon from "../../components/common/TitleIcon";
 // Link do vídeo padrão
 const videoPadrao = "https://youtu.be/XG3F-gJXzZs?si=i1sdKWpXnB9qHIZY";
 
+// Lista de conteúdos de Matemática
 const checklistConteudos = [
   {
     titulo: "1. Matemática Básica e Funções",
@@ -22,7 +23,7 @@ const checklistConteudos = [
       "Progressão aritmética",
       "Progressão geométrica",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "2. Geometria Plana",
@@ -37,7 +38,7 @@ const checklistConteudos = [
       "Fórmulas de áreas de triângulos",
       "Área do círculo e suas partes",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "3. Trigonometria",
@@ -47,7 +48,7 @@ const checklistConteudos = [
       "Funções trigonométricas",
       "Gráficos de função trigonométrica",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "4. Geometria Espacial",
@@ -57,7 +58,7 @@ const checklistConteudos = [
       "Cálculo de volumes dos sólidos geométricos",
       "Cálculo das áreas superficiais dos sólidos geométricos",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "5. Geometria de Posição",
@@ -67,7 +68,7 @@ const checklistConteudos = [
       "Estudos dos Poliedros Regulares",
       "Projeção Ortogonal",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "6. Combinatória e Probabilidade",
@@ -80,7 +81,7 @@ const checklistConteudos = [
       "Probabilidade da União",
       "Probabilidade Condicional",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
   {
     titulo: "7. Estatística",
@@ -90,28 +91,52 @@ const checklistConteudos = [
       "Desvio médio",
       "Desvio Padrão",
     ],
-    videoLink: videoPadrao, // Adicionando o link de vídeo
+    videoLink: videoPadrao,
   },
 ];
 
 const Matematica = () => {
   return (
-    <div className="p-6 max-w-screen flex flex-col items-center justify-center">
-
+    <div className="min-h-screen bg-white px-4">
+      <div className="max-w-4xl mx-auto mt-18 flex flex-col items-center">
+        {/* Título principal da página */}
         <TitleIcon
           title="Matemática"
           subtitle="Conteúdo Programático."
           style="text-5xl"
         />
 
-      {checklistConteudos.map((item, index) => (
-        <CardDropdown key={index} assunto={item} />
-      ))}
-      <ButtonNormal
-        label="Questões de Matemática"
-        to="/redacoes-nota-maxima"
-        className="mt-4 w-full text-white bg-[#00145d] rounded"
-      />
+        <p className="text-gray-700 text-justify mb-6 indent-10">
+          A prova de Matemática do ENEM é composta por 45 questões, com grande
+          parte delas — cerca de 30 — consideradas de fácil ou média
+          dificuldade. Isso significa que, com uma boa preparação, é possível
+          garantir uma pontuação alta acertando as questões mais acessíveis, que
+          costumam envolver raciocínio lógico, interpretação de gráficos e
+          operações básicas.
+        </p>
+
+        {/* Caixa de dica em destaque */}
+        <div className="bg-[#00145d] border-l-4 border-yellow-400 p-4 mb-8 w-full">
+          <p className="text-[#ffd400] font-medium">
+            Dica: Resolver questões de provas anteriores é uma ótima maneira de
+            se preparar.
+          </p>
+        </div>
+
+        {/* Lista de conteúdos com dropdowns */}
+        <section className="space-y-6 w-full">
+          {checklistConteudos.map((item, index) => (
+            <CardDropdown key={index} assunto={item} />
+          ))}
+        </section>
+
+        {/* Botão de navegação ao final */}
+        <ButtonNormal
+          label="Questões de Matemática"
+          to="/questoes-matematica"
+          className="mt-8 w-full text-white bg-[#00145d] rounded"
+        />
+      </div>
     </div>
   );
 };

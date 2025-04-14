@@ -95,7 +95,7 @@ const areaInfo = [
 
 
 const LandingPage = () => {
-  const images = [slide1, slide2, slide1, slide3]; // Imagens para o slider
+  const images = [slide3, slide2, slide1, slide3];
 
   return (
     <section className="flex flex-col my-b min-h-screen max-w-screen items-center justify-center">

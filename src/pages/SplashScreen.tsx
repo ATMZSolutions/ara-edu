@@ -7,7 +7,7 @@ const SplashScreen: React.FC = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const duration = 2000;
+        const duration = 1500;
         const interval = 50;   // atualiza a cada 50ms
         const increment = 100 / (duration / interval);
 

@@ -7,6 +7,7 @@ import LandingPage from './src/pages/LandingPage.tsx';
 import BottomNav from './src/components/layout/BottomNav.tsx';
 import Redacao from './src/pages/trilhas/Redacao.tsx';
 import Matematica from './src/pages/trilhas/Matematica.tsx';
+import SplashScreen from './src/pages/SplashScreen.tsx';
 
 function AppRoutes() {
     return (
@@ -14,7 +15,8 @@ function AppRoutes() {
             <AppHeader/>
             <div className="min-w-full min-h-screen pl-0 md:pl-20">
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={<SplashScreen />} />
+                    <Route path="/home" element={<LandingPage />} />
                     <Route path="/baixar-provas" element={<BaixarProvas />} />
                     <Route path="*" element={<NotFound />} />
                     <Route path="/redacao" element={<Redacao />} />

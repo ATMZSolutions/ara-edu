@@ -4,7 +4,7 @@ import { RiHome2Fill } from "react-icons/ri";
 
 const BottomNav = () => {
   const menuOptions = [
-    { label: "Home", link: "/", icon: <RiHome2Fill size={22} /> },
+    { label: "Home", link: "/home", icon: <RiHome2Fill size={22} /> },
     { label: "Redação", link: "/redacao", icon: <FaPenAlt size={22} /> },
     { label: "Provas", link: "/baixar-provas", icon: <IoIosPaper size={22} /> },
     // { label: "Perfil", link: "/perfil", icon: <FaUser size={22} /> },
